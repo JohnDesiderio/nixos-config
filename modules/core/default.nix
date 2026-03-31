@@ -10,7 +10,7 @@
     ./timezone.nix
     ./users.nix
     ./virtualization.nix
-    ./wayland.nix
+    # ./wayland.nix
     ./xserver.nix
   ];
 }

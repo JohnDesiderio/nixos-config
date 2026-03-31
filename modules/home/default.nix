@@ -3,6 +3,6 @@
   imports = [
     ./git.nix
     ./nvim.nix
-    ./hyprland.nix
+    # ./hyprland.nix
   ];
 }
