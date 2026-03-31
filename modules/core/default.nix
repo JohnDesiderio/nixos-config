@@ -2,8 +2,6 @@
 {
   imports = [
     ./bootloader.nix
-    ./docker.nix
-    ./i18.nix
     ./networking.nix
     ./nix-specific-settings.nix
     ./nixpkgs.nix
@@ -11,6 +9,7 @@
     ./services.nix
     ./timezone.nix
     ./users.nix
+    ./virtualization.nix
     ./xserver.nix
   ];
 }
