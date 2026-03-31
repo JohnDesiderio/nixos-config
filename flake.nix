@@ -14,16 +14,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland";
 
-    # hyprland-plugins = {
-    #   url = "github:hyprwm/hyprland-plugins";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = 
-    { nixpkgs, self, ... } @ inputs: 
+    { self, nixpkgs, nix-index-database, ... } @ inputs: 
     let
       username = "johnd";
       system = "x86_64-linux";
@@ -42,7 +42,10 @@
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           inherit system;
-	  modules = [ ./hosts/desktop ];
+	  modules = [ 
+	    ./hosts/desktop 
+            nix-index-database.nixosModules.default
+	  ];
 	  specialArgs = {
             host = "desktop";
 	    inherit self inputs username;
