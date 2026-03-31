@@ -25,6 +25,6 @@
     isNormalUser = true;
     description = "${username}";
     extraGroups = [ "networkmanager" "wheel" ];
-    nix.settings.allowed-users = [ "${username}" ];
   };
+  nix.settings.allowed-users = [ "${username}" ];
 }
