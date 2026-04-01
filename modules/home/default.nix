@@ -1,8 +1,9 @@
 { ... }:
 {
   imports = [
+    ./bat.nix
     ./git.nix
     ./nvim.nix
-    ./wayland.nix
+    ./hyprland
   ];
 }
