@@ -1,6 +1,6 @@
 { ... }: 
 {
   imports = [
-    wayland.nix
+    ./wayland.nix
   ];
 }
