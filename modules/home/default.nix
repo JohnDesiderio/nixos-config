@@ -3,8 +3,9 @@
   imports = [
     ./bat.nix
     ./git.nix
-    ./nvim.nix
+    ./ghostty.nix
     ./hyprland
     ./kitty.nix
+    ./nvim.nix
   ];
 }
