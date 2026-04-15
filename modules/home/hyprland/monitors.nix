@@ -1,7 +1,10 @@
 { pkgs, ... }: 
 {
   wayland.windowManager.hyprland = {
-    settings.monitor = [ "DP-1, 1920x1080, 0x0, 1" ];
+    settings.monitor = [ 
+      "DP-1,3840x2160,0x0,1" 
+      ""
+    ];
 
     extraConfig = ''
       # hyprlang noerror true

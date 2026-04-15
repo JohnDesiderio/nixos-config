@@ -9,6 +9,7 @@
     bind = [
       "SUPER_SHIFT, Q, exec, firefox"
       "$mod, Q, exec, ghostty"
+      "$mod, F, fullscreen, 0"
     ];
   };
 }

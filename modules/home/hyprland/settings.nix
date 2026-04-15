@@ -1,6 +1,6 @@
 { ... }:
 {
   wayland.windowManager.hyprland.settings = {
-    "$mod" = "CTRL";
+    "$mod" = "SUPER";
   };
 }
