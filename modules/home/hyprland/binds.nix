@@ -8,7 +8,7 @@
 
     bind = [
       "SUPER_SHIFT, Q, exec, firefox"
-      "$mod, Q, exec, kitty"
+      "$mod, Q, exec, ghostty"
     ];
   };
 }
