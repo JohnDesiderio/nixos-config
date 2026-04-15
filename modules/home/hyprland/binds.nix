@@ -7,7 +7,7 @@
     };
 
     bind = [
-      "$mod SHIFT, F, fullscreen, 1"
+      "SUPER_SHIFT, Q, exec, firefox"
     ];
   };
 }
