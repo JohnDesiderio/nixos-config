@@ -2,6 +2,8 @@
 {
   wayland.windowManager.hyprland = {
     settings.monitor = [ 
+    	"DP-1, 1920x1080, auto, auto"
+    	"HDMI-1, 1920x1080, auto, auto"
     ];
 
     extraConfig = ''
