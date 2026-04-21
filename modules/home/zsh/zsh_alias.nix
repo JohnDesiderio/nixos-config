@@ -1,0 +1,8 @@
+{ ... }:
+{
+  programs.zsh = {
+    shellAliases = {
+
+    };
+  };
+}
