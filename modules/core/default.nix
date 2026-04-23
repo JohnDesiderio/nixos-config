@@ -6,6 +6,7 @@
     ./nix-specific-settings.nix
     ./nixpkgs.nix
     ./pipewire.nix
+    ./program.nix
     ./services.nix
     ./timezone.nix
     ./users.nix
