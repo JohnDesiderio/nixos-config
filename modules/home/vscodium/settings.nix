@@ -21,8 +21,8 @@
       "nix.serverPath" = "nixd";
       "nix.enableLanguageServer" = true;
 
-      "files.watcherExclude.**/.bloop" = true;
-      "files.watcherExclude.**/.metals" = true;
+      "files.watcherExclude.**.bloop" = true;
+      "files.watcherExclude.**.metals" = true;
     };
   };
 }
