@@ -22,35 +22,36 @@
     };
   };
 
-  outputs = 
-    { self, nixpkgs, nix-index-database, ... } @ inputs: 
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nix-index-database,
+      ...
+    }@inputs:
     let
       username = "johnd";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-	config.allowUnfree = true;
+        config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
     in
     {
 
-      # packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-      # packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           inherit system;
-	  modules = [ 
-	    ./hosts/desktop 
+          modules = [
+            ./hosts/desktop
             nix-index-database.nixosModules.default
-	  ];
-	  specialArgs = {
+          ];
+          specialArgs = {
             host = "desktop";
-	    inherit self inputs username;
-	  };
-	};
+            inherit self inputs username;
+          };
+        };
       };
     };
 }
