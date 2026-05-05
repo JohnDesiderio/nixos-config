@@ -8,7 +8,7 @@
     ./hyprland
     ./kitty.nix
     ./nvim.nix
-    ./packages.nix
+    ./packages
     ./vscodium
     ./zsh
   ];
