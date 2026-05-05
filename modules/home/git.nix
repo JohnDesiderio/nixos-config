@@ -5,8 +5,8 @@
 
     settings = {
       user = {
-        name = "John Desiderio";
-	      email = "johnfrancisdesiderio@gmail.com";
+        name = "JohnDesiderio";
+        email = "johnfrancisdesiderio@gmail.com";
       };
     };
   };
