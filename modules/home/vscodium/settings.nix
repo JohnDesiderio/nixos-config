@@ -11,7 +11,7 @@
 
       "files.autoSave" = "onWindowChange";
       "files.insertFinalNewLine" = true;
-   
+
       ## C/C++
       "clangd.arguments" = [
         "--clang-tidy"
@@ -20,6 +20,9 @@
 
       "nix.serverPath" = "nixd";
       "nix.enableLanguageServer" = true;
+
+      "files.watcherExclude.**/.bloop" = true;
+      "files.watcherExclude.**/.metals" = true;
     };
-  };  
+  };
 }
