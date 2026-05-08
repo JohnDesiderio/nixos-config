@@ -149,7 +149,7 @@ in
 
   imports = [
     baseSettings
-    /theme.nix
+    ./theme.nix
     scala
     ./metals.nix
     prettier
