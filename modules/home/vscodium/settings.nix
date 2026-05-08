@@ -1,25 +1,29 @@
-{ ... }:
 {
-  programs.vscode.profiles.default = {
-    userSettings = {
-      "extensions.autoUpdate" = false;
+  "breadcrumbs.enabled" = true;
 
-      "editor.formatOnSave" = true;
-      "editor.formatOnType" = true;
-      "editor.formatOnPaste" = true;
-      "editor.inlayHints.enabled" = "off";
+  "debug.allowBreakpointsEveryWhere" = true;
 
-      "files.autoSave" = "onWindowChange";
-      "files.insertFinalNewLine" = true;
+  "extensions.autoUpdate" = false;
 
-      ## C/C++
-      "clangd.arguments" = [
-        "--clang-tidy"
-        "--inlay-hints=false"
-      ];
+  "editor.accessibilitySupport" = "off";
+  "editor.cursorBlinking" = "solid";
+  "editor.fontFamily" = "JetBrainsMono Nerd Font";
+  "editor.inlineSuggest.enabled" = true;
+  "editor.tabSize" = 2;
+  "editor.formatOnSave" = true;
+  "editor.formatOnType" = true;
+  "editor.formatOnPaste" = true;
+  "editor.inlayHints.enabled" = "off";
 
-      "nix.serverPath" = "nixd";
-      "nix.enableLanguageServer" = true;
-    };
-  };
+  "files.autoSave" = "onWindowChange";
+  "files.insertFinalNewLine" = true;
+
+  ## C/C++
+  "clangd.arguments" = [
+    "--clang-tidy"
+    "--inlay-hints=false"
+  ];
+
+  "nix.serverPath" = "nixd";
+  "nix.enableLanguageServer" = true;
 }
