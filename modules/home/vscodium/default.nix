@@ -14,7 +14,7 @@ let
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
     userSettings = import ./settings.nix;
-    keybindings = import ./keybindings.nix { inherit vscode-lib; };
+    keybindings = import ./keybinds.nix { inherit vscode-lib; };
 
     extensions = auto-extensions;
   };
