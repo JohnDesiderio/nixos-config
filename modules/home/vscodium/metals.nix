@@ -6,7 +6,7 @@ let
 in
 configuredExtension {
   extension = vscode-extensions.scalameta.metals;
-  foramtterFor = [ "scala" ];
+  formatterFor = [ "scala" ];
   settings = {
     "metals.serverProperties" = [
       "-Dmetals.verbose=true"
