@@ -60,7 +60,7 @@ let
   };
 
   gitlens = configuredExtension {
-    extension = vscode-extensions.eamodia.gitlens;
+    extension = vscode-extensions.eamodio.gitlens;
     settings = {
       "gitlens.currentLine.enabled" = false;
     };
@@ -101,7 +101,7 @@ let
         "flake.lock" = "json";
       };
       "nix.serverSettings" = {
-        nil.formatting.command = [ (pkgs.lib.getExe pkgs.nixFmt) ];
+        nil.formatting.command = [ (pkgs.lib.getExe pkgs.nixfmt) ];
       };
     }
     // exclude [ ".direnv/" ];
