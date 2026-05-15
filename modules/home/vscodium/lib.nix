@@ -25,7 +25,7 @@ let
       "search.exclude" = obj;
     };
 
-  mkVscodeModule = content: { programs.vscode.profile.default = content; };
+  mkVscodeModule = content: { programs.vscode.profiles.default = content; };
 
   configuredExtension =
     {
