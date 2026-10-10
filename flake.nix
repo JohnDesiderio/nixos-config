@@ -57,20 +57,20 @@
         ];
       };
     };
-  };
 
-  # Standalone home-manager configuration entrypoint
-  # Available through 'home-manager --flake .#your-username@your-hostname'
-  homeConfigurations = {
-    # FIXME replace with your username@hostname
-    "johnd@nixos" = inputs.home-manager.lib.homeManagerConfiguration {
-      # Home-manager requires 'pkgs' instance
-      pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecture
-      extraSpecialArgs = {inherit inputs;};
-      modules = [
-        # > Our main home-manager configuration file <
-        ./home-manager/home.nix
-      ];
+    # Standalone home-manager configuration entrypoint
+    # Available through 'home-manager --flake .#your-username@your-hostname'
+    homeConfigurations = {
+      # FIXME replace with your username@hostname
+      "johnd@nixos" = home-manager.lib.homeManagerConfiguration {
+        # Home-manager requires 'pkgs' instance
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecture
+        extraSpecialArgs = {inherit inputs;};
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/home.nix
+        ];
+      };
     };
   };
 }
