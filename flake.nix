@@ -60,6 +60,9 @@
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
+    # Upon the first rebuild, it doesn't build home-manager, but home-manager is added to the flake.lock.
+    # Run `github:nix-community/home-manager -- switch --flake .#your-username@your-hostname` and 
+    # home-manager is added to the path indefinitely.
     homeConfigurations = {
       # FIXME replace with your username@hostname
       "johnd@nixos" = home-manager.lib.homeManagerConfiguration {
