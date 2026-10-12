@@ -10,12 +10,15 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvf.url = "github:notashelf/nvf";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    nvf,
     ...
   } @ inputs: let
     systems = [
@@ -71,7 +74,8 @@
         extraSpecialArgs = {inherit inputs;};
         modules = [
           # > Our main home-manager configuration file <
-          ./home-manager/home.nix
+          nvf.homeManagerModules.default # <- this import the home-manager module that provides the options
+          ./home-manager/home.nix # <- your home entrypoint, `programs.nvf.*` may be defined here
         ];
       };
     };
