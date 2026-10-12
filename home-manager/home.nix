@@ -18,6 +18,11 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    ./btop.nix
+    ./git.nix
+    ./kitty.nix
+    ./lazygit.nix
+    ./prism.nix
   ];
 
   nixpkgs = {
