@@ -36,7 +36,12 @@
   };
 
   services.xserver.videoDrivers = [ "nvidia" ]; 
-  hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia = { 
+    modesetting.enable = true;
+
+    # Required explicitly for drivers >= 560
+    open = true;
+  };
   # FIXME: end 
 
   nixpkgs = {
