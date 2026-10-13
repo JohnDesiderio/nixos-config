@@ -22,11 +22,11 @@
     ...
   } @ inputs: let
     systems = [
-      "aarch64-linux"
-      "i686-linux"
+      # "aarch64-linux"
+      # "i686-linux"
       "x86_64-linux"
-      "aarch64-darwin"
-      "x86_64-darwin"
+      # "aarch64-darwin"
+      # "x86_64-darwin"
     ];
     # This is afunction that generates an attribute by calling a function you
     # pass to it, with each system as an argument
