@@ -24,11 +24,17 @@
       # Import your generated (nixos-generate-config) hardware configuration
       ./hardware-configuration.nix
     ];
-
+  # FIXME: Everything in here is to diagnose problems with loading Kitty
   environment.sessionVariables = {
     # Hint Electron apps to use Wayland natively
     NIXOS_OZONE_WL = "1";
   };
+  
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true; # Highly recommended for Steam/gaming
+  };
+  # FIXME: end 
 
   nixpkgs = {
     # You can add overlays here
