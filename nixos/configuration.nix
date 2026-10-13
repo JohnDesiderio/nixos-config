@@ -36,7 +36,7 @@
   };
 
   services.xserver.videoDrivers = [ "nvidia" ]; 
-  hardware.nvidia.modesettings.enable = true;
+  hardware.nvidia.modesetting.enable = true;
   # FIXME: end 
 
   nixpkgs = {
