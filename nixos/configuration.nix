@@ -34,6 +34,9 @@
     enable = true;
     enable32Bit = true; # Highly recommended for Steam/gaming
   };
+
+  services.xserver.videoDrivers = [ "nvidia" ]; 
+  hardware.nvidia.modesettings.enable = true;
   # FIXME: end 
 
   nixpkgs = {
