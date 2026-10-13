@@ -42,6 +42,11 @@
     # Required explicitly for drivers >= 560
     open = true;
   };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
   # FIXME: end 
 
   nixpkgs = {
