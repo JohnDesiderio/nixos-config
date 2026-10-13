@@ -65,7 +65,7 @@
             format.type = ["ruff"];
             lsp = {
               enable = true;
-              server = [ "pyrefly" ];
+              servers = [ "pyrefly" ];
             };
             extraDiagnostics.enable = false;
           };
