@@ -108,13 +108,6 @@
           };
         };
 
-        theme = {
-          enable = true;
-          name = "tokyonight";
-          style = "night";
-          transparent = false;
-        };
-
         filetree = {
           nvimTree = {
             enable = true;
