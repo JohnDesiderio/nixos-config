@@ -25,6 +25,11 @@
       ./hardware-configuration.nix
     ];
 
+  environment.sessionVariables = {
+    # Hint Electron apps to use Wayland natively
+    NIXOS_OZONE_WL = "1";
+  };
+
   nixpkgs = {
     # You can add overlays here
     overlays = [
