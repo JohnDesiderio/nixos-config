@@ -32,6 +32,24 @@
             enable = true;
             setupOpts = {
               sections = {
+                activeSection.c = [
+                  ''
+                    {
+                      "diff",
+                      colored = true,
+                      diff_color = {
+                        added = 'DiffAdd',
+                        modified = 'DiffChange',
+                        removed = 'DiffDelete',
+                      },
+                      symbols = {
+                        added = '[+] ',
+                        modified = '[~] ',
+                        added = '[-] ',
+                      },
+                    }
+                  ''
+                ];
                 lualine_a = ["mode"]; 
                 lualine_y = []; 
                 lualine_z = ["location"]; 
