@@ -33,28 +33,28 @@
       ./hardware-configuration.nix
     ];
     # FIXME: Everything in here is to diagnose problems with loading Kitty
-    environment.sessionVariables = {
-      # Hint Electron apps to use Wayland natively
-      NIXOS_OZONE_WL = "1";
-    };
-    
-    hardware.graphics = {
-      enable = true;
-      enable32Bit = true; # Highly recommended for Steam/gaming
-    };
-
-    services.xserver.videoDrivers = [ "nvidia" ]; 
-    hardware.nvidia = { 
-      modesetting.enable = true;
-
-      # Required explicitly for drivers >= 560
-      open = true;
-    };
-
-    xdg.portal = {
-      enable = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    };
+    # environment.sessionVariables = {
+    #   # Hint Electron apps to use Wayland natively
+    #   NIXOS_OZONE_WL = "1";
+    # };
+    #
+    # hardware.graphics = {
+    #   enable = true;
+    #   enable32Bit = true; # Highly recommended for Steam/gaming
+    # };
+    #
+    # services.xserver.videoDrivers = [ "nvidia" ]; 
+    # hardware.nvidia = { 
+    #   modesetting.enable = true;
+    #
+    #   # Required explicitly for drivers >= 560
+    #   open = true;
+    # };
+    #
+    # xdg.portal = {
+    #   enable = true;
+    #   extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    # };
     # FIXME: end 
 
   # Allow unfree packages
